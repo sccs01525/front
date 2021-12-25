@@ -54,6 +54,7 @@ nav ul li a:hover {
 #showcase .container {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
 }
@@ -63,46 +64,30 @@ nav ul li a:hover {
     color: #fff;
     width: 55%;
     height: 100%;
+    text-align: center;
 }
-#showcase .container .quick-links {
+#showcase .container .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 90vw;
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+#showcase .container .contact-info div {
+    color: #fff;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 35%;
-    border-radius: 4px;
-    box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.2);
-    background-color: #f2f2f2;
-    margin: 6rem auto;
-}
-#showcase .container .quick-links h3 {
-    font-weight: 500;
-    margin: 1rem;
-    text-transform: uppercase;
-}
-#showcase .container .quick-links ul {
-    list-style-type: none;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-#showcase .container .quick-links ul li {
-    border-top: 1px solid hsla(0, 0%, 100%, 0.1);
-    background-color: rgba(89, 48, 147, 0.8);
-    transition: background-color 200ms ease;
-    padding: .8rem 0;
-    width: 100%;
-}
-#showcase .container .quick-links ul li:last-child {
-    border-radius: 0 0 4px 4px;
-}
-#showcase .container .quick-links ul li a {
-    font-size: .9rem;
-    width: 100%;
-    color: #fff;
-    text-decoration: none;
+    align-items: center;
     padding: 1rem;
 }
 
+#showcase .container .contact-info div img {
+    max-width: 5rem;
+    display: block;
+    padding-bottom: 1rem;
+}
 .contact {
     background-color: #f7f9fa;
     padding: 1rem;
@@ -160,8 +145,8 @@ nav ul li a:hover {
     padding: 1rem;
     border: none;
     border-radius: 5px;
-    margin-top: 1rem;
     cursor: pointer;
+    margin: 2rem auto;
 }
 
 .contact-form .submit-button-text {
@@ -293,12 +278,9 @@ footer .copyright {
         width: 100%;
         text-align: center;
     }
-    #showcase .container .quick-links {
-        width: 75%;
-        margin: 3rem auto;
-    }
-    #showcase .container .quick-links ul li a {
-        font-size: 1.0rem;
+
+    .contact .contact-form {
+        padding: 4rem 2rem;
     }
 
     .contact-form .input-row {
@@ -308,6 +290,14 @@ footer .copyright {
     .contact-form .input-row .field {
         width: 100%;
     }
+
+    .contact-form .input-row .field input,
+    .contact-form textarea,
+    .contact-form input[type='submit'] {
+        width: 90%;
+    }
+
+
 
     footer .footer-contact .footer-contact-item {
         width: 50%;
@@ -330,6 +320,11 @@ footer .copyright {
     nav ul {
         flex-direction: column;
         align-items: center;
+    }
+
+    .contact-form .submit-button-text {
+        flex-direction: column;
+        text-align: center;
     }
 
     footer .footer-contact .footer-contact-item {
